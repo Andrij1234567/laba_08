@@ -37,7 +37,7 @@ class SignInScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 10.0),
 
-                // Поле вводу пароля
+
                 TextFormField(
                   validator: (value) {
                     if (value == null || value.isEmpty) return 'Please enter password';
@@ -52,13 +52,13 @@ class SignInScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 20.0),
 
-                // Кнопка "Log in" з перевіркою форми
+
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
-                        // Дані валідні
+
                         showDialog(
                           context: context,
                           builder: (BuildContext ctx) {
@@ -68,7 +68,7 @@ class SignInScreen extends StatelessWidget {
                           },
                         );
                       } else {
-                        // Дані не валідні
+         
                         showDialog(
                           context: context,
                           builder: (BuildContext ctx) {
